@@ -2,7 +2,7 @@
  * Less Template
  * @author: Rutger Laurman - lekkerduidelijk.nl
  */
-// Personal less template, used for starting projects 
+// Personal less template, used for starting projects
 // Snippets of reusable CSS, a collection of the ones I most often
 //
 // Inspired by h5pb.com
@@ -11,46 +11,17 @@
 
 // Import normalize
 // *****************************************************************************
-@import url(normalize.css);
-
-
-// Base (additions to normalize.css, inspired by h5bp.com/css)
-// *****************************************************************************
-
-/* Base colors and font size */
-html, button, input, select, textarea { 
-  color: #222; 
-}
-
-body { 
-  font-size: 1em; 
-  line-height: 1.4; 
-}
-
-a { 
-  color: #00e; 
-}
-a:visited { 
-  color: #551a8b; 
-}
-a:hover { 
-  color: #06e; 
-}
-
-
-// Primary styles
-// *****************************************************************************
-
+@import url(normalize.less);
 
 // Utility mixins
 // *****************************************************************************
 
 /* Micro clearfix - lrdk.nl/ck */
-.cf { 
+.cf {
   zoom: 1;
   &:before,
   &:after {
-    content: ""; 
+    content: "";
     display: table;
   }
   &:after {
@@ -59,7 +30,7 @@ a:hover {
 }
 
 /* Image replacement */
-.ir { 
+.ir {
   background-color: transparent;
   border: 0;
   color: transparent;
@@ -88,8 +59,8 @@ a:hover {
           box-shadow: @shadow;
 }
 
-// Gradient mixin 
-// Vertical - top to bottom 
+// Gradient mixin
+// Vertical - top to bottom
 .gradientvertical(@startColor: #555, @endColor: #333) {
   background-color: mix(@startColor, @endColor, 60%);
   background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
@@ -119,3 +90,31 @@ a:hover {
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
+
+// Base (additions to normalize.css, inspired by h5bp.com/css)
+// *****************************************************************************
+
+/* Base colors and font size */
+html, button, input, select, textarea {
+  color: #222;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+
+
+// Primary styles
+// *****************************************************************************
+
