@@ -10,13 +10,44 @@
 
 
 // Import normalize
-// *****************************************************************************
+// =============================================================================
 @import url(normalize.less);
 
-// Utility mixins
-// *****************************************************************************
 
-/* Micro clearfix - lrdk.nl/ck */
+// Base (additions to normalize.css, inspired by h5bp.com/css)
+// =============================================================================
+
+// Base colors and font size
+html, button, input, select, textarea {
+  color: #222;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+a {
+  color: #00e;
+}
+a:visited {
+  color: #551a8b;
+}
+a:hover {
+  color: #06e;
+}
+
+// =============================================================================
+// Primary styles
+// =============================================================================
+
+
+
+// =============================================================================
+// Utility mixins
+// =============================================================================
+
+// Micro clearfix - lrdk.nl/ck
 .cf {
   zoom: 1;
   &:before,
@@ -29,7 +60,7 @@
   }
 }
 
-/* Image replacement */
+// Image replacement
 .ir {
   background-color: transparent;
   border: 0;
@@ -43,7 +74,7 @@
 .debug { border: thin solid red; }
 
 // CSS3 vendor mixins
-// *****************************************************************************
+// =============================================================================
 
 // Border Radius
 .border-radius(@radius) {
@@ -72,6 +103,7 @@
   background-repeat: repeat-x;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down
 }
+
 // Horizontal - left to right
 .gradienthorizontal(@startColor: #555, @endColor: #333) {
   background-color: @endColor;
@@ -90,31 +122,3 @@
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
-
-// Base (additions to normalize.css, inspired by h5bp.com/css)
-// *****************************************************************************
-
-/* Base colors and font size */
-html, button, input, select, textarea {
-  color: #222;
-}
-
-body {
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-a {
-  color: #00e;
-}
-a:visited {
-  color: #551a8b;
-}
-a:hover {
-  color: #06e;
-}
-
-
-// Primary styles
-// *****************************************************************************
-
