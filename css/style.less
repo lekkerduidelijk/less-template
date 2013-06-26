@@ -5,7 +5,7 @@
 // Personal less template, used for starting projects
 // Snippets of reusable CSS, a collection of the ones I most often
 //
-// Inspired by h5pb.com
+// Inspired by h5bp.com
 // Uses normalize.css
 // Uses Twitter Bootstrap mixins
 
@@ -60,6 +60,8 @@ textarea {
 
 // Colors
 
+// Fonts
+
 // Sprites
 
 // Buttons
@@ -75,7 +77,7 @@ textarea {
 // =============================================================================
 
 // Micro clearfix - lrdk.nl/ck
-.cf {
+.cf() {
   zoom: 1;
   &:before,
   &:after {
@@ -88,7 +90,7 @@ textarea {
 }
 
 // Image replacement
-.ir {
+.ir() {
   background-color: transparent;
   border: 0;
   color: transparent;
@@ -96,10 +98,14 @@ textarea {
   text-shadow: none;
 }
 
+// Spacing and debugging
+.nospace() { margin: 0; padding: 0; }
+.debug() { border: thin solid red; }
+.debugbg() { background-color: red !important; }
+
+// =============================================================================
 // Helpers
-.nospace { margin: 0; padding: 0; }
-.debug { border: thin solid red; }
-.debugbg { background-color: red !important; }
+// =============================================================================
 
 // Image alignment
 .alignright {
@@ -162,7 +168,6 @@ textarea {
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
-
 
 // Transitions
 .transition(@transition) {
