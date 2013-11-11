@@ -2,16 +2,14 @@
  * Less Template
  * @author: Rutger Laurman - lekkerduidelijk.nl
  */
-// Personal less template, used for starting projects
-// Snippets of reusable CSS, a collection of the ones I most often
-//
-// Inspired by h5bp.com
-// Uses normalize.css
-// Uses Twitter Bootstrap mixins
 
-// Import normalize
+// Imports
 // =============================================================================
-@import url(normalize.less);
+
+// Choose your destiny
+@import "normalize"; // [1]
+@import "vendor/bootstrap/bootstrap"; // [1]
+
 
 // =============================================================================
 // Base (additions to normalize.css, inspired by h5bp.com/css)
@@ -31,12 +29,6 @@ body {
 // Default link style
 a {
   color: #00e;
-}
-a:visited {
-  color: #551a8b;
-}
-a:hover {
-  color: #06e;
 }
 
 // H5BP additions
