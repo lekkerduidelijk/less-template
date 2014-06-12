@@ -23,8 +23,6 @@ Project kickstarter.
 * Run <code>grunt build</code> to build production code
 * Run <code>grunt watch</code> to watch files
 
----
-
 ## Contains
 
 * Bower
