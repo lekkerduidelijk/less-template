@@ -51,3 +51,6 @@ build/config/buildinfo.properties
 
 # Exclude node modules
 node_modules/
+
+# Exclude bower components
+bower_components/
