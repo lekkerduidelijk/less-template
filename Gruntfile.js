@@ -16,9 +16,9 @@ module.exports = function(grunt) {
         },
         files: {
           src: [
-            'build/js/all.js',
-            'build/css/style.css',
-            'build/css/style.cleaned.css'
+            'build/assets/js/all.js',
+            'build/assets/css/style.css',
+            'build/assets/css/style.cleaned.css'
           ]
         }
       }
@@ -44,11 +44,11 @@ module.exports = function(grunt) {
       },
       scripts: {
         src: [
-          'build/js/**/*.js',
-          'build/js/vendor/**',
-          '!build/js/all.full.js',
-          '!build/js/all.js',
-          '!build/js/oldbrowsers.js'
+          'build/assets/js/**/*.js',
+          'build/assets/js/vendor/**',
+          '!build/assets/js/all.full.js',
+          '!build/assets/js/all.js',
+          '!build/assets/js/oldbrowsers.js'
         ]
       }
     },
@@ -56,13 +56,13 @@ module.exports = function(grunt) {
     less: {
       build: {
         options: {
-          paths: ["source/css"],
+          paths: ["source/assets/css"],
           dumpLineNumbers: 'comments',
           compress: false
         },
         files: [{
-          src:  'source/css/style.less',
-          dest: 'build/css/style.full.css'
+          src:  'source/assets/css/style.less',
+          dest: 'build/assets/css/style.full.css'
         }]
       }
     },
@@ -79,25 +79,30 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          'build/css/style.css': [ 'build/css/style.full.css' ],
-          'build/css/style.cleaned.css': [ 'build/css/style.cleaned.full.css' ]
+          'build/assets/css/style.css': [ 'build/assets/css/style.full.css' ],
+          'build/assets/css/style.cleaned.css': [ 'build/assets/css/style.cleaned.full.css' ]
         }
       }
     },
 
     uncss: {
       build: {
-        src: ['build/**/*.html'],
-        dest: 'build/css/style.cleaned.full.css',
+        src: ['build/assets/**/*.html'],
+        dest: 'build/assets/css/style.cleaned.full.css',
         options: {
           ignore: [
-            '.collapsing', // collapsing
-            /\.fade/, // fade
-            /\.close/, // .close class
-            /\.collapse/, // .collapse prefixed classes
-            /\.modal/, // .modal prefixed classes
-            /\.js\-/, // .js- prefixed classes
-            /\.is\-/, // .is- prefixed classes
+            /\.collapsing/,
+            /\.fade/,
+            /\.close/,
+            /\.collapse/,
+            /\.modal/,
+            /\.js\-/,
+            /\.is\-/,
+            /\.has\-/,
+            /\.no\-/,
+            /\.affix/,
+            /\-webkit\-/,
+            /\-moz\-/,
           ],
           htmlroot: 'build',
           stylesheets: ['style.full.css'],
@@ -115,17 +120,17 @@ module.exports = function(grunt) {
           // Add more libraries here
           // 'bower_components/...',
 
-          'source/js/plugins.js',
-          'source/js/main.js',
+          'source/assets/js/plugins.js',
+          'source/assets/js/main.js',
         ],
-        dest: 'build/js/all.full.js',
+        dest: 'build/assets/js/all.full.js',
       },
       oldbrowsers: {
         src: [
           'bower_components/html5shiv/dist/html5shiv.js',
           'bower_components/respond/dest/respond.min.js'
         ],
-        dest: 'build/js/oldbrowsers.js'
+        dest: 'build/assets/js/oldbrowsers.js'
       }
     },
 
@@ -135,8 +140,8 @@ module.exports = function(grunt) {
           report: 'min'
         },
         files: {
-          'build/js/all.js': [ 'build/js/all.full.js' ],
-          'build/js/oldbrowsers.js': [ 'build/js/oldbrowsers.js' ]
+          'build/assets/js/all.js': [ 'build/assets/js/all.full.js' ],
+          'build/assets/js/oldbrowsers.js': [ 'build/assets/js/oldbrowsers.js' ]
         }
       }
     },
@@ -145,9 +150,9 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: 'source/img/',
+          cwd: 'source/assets/img/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'build/img/'
+          dest: 'build/assets/img/'
         }]
       }
     },
@@ -162,32 +167,32 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: 'source/img',
+          cwd: 'source/assets/img',
           src: ['**/*.svg'],
-          dest: 'build/img/'
+          dest: 'build/assets/img/'
         }]
       }
     },
 
     watch: {
       scripts: {
-        files: ['source/**/*.js'],
+        files: ['source/assets/**/*.js'],
         tasks: ['scripts'],
       },
       stylesheets: {
-        files: ['source/**/*.less'], //, 'source/**/module/*.less', 'source/**/layout/*.less'],
+        files: ['source/assets/**/*.less'],
         tasks: ['stylesheets'],
       },
       copy: {
         files: [
-          'source/**',
-          '!source/**/*.js',
-          '!source/**/*.less'
+          'source/assets/**',
+          '!source/assets/**/*.js',
+          '!source/assets/**/*.less'
         ],
         tasks: ['copy']
       },
       livereload: {
-        files: ['build/css/*.css'],
+        files: ['build/assets/css/*.css'],
         options: { livereload: true }
       }
     },
