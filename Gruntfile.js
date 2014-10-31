@@ -87,7 +87,7 @@ module.exports = function(grunt) {
 
     uncss: {
       build: {
-        src: ['build/assets/**/*.html'],
+        src: ['build/**/*.html'],
         dest: 'build/assets/css/style.cleaned.full.css',
         options: {
           ignore: [
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
           ],
           htmlroot: 'build',
           stylesheets: ['style.full.css'],
-          csspath: 'css/',
+          csspath: 'assets/css/',
           report: 'min',
         }
       }
