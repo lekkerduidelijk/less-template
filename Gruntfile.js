@@ -185,7 +185,7 @@ module.exports = function(grunt) {
       },
       copy: {
         files: [
-          'source/assets/**',
+          'source/**',
           '!source/assets/**/*.js',
           '!source/assets/**/*.less'
         ],
