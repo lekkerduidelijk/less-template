@@ -115,12 +115,11 @@ module.exports = function(grunt) {
     concat: {
       base: {
         src: [
-          'bower_components/jquery/jquery.js',
-          'bower_components/modernizr/modernizr.js',
+          'bower_components/jquery/dist/jquery.js',
+
           // Add more libraries here
           // 'bower_components/...',
 
-          'source/assets/js/plugins.js',
           'source/assets/js/main.js',
         ],
         dest: 'build/assets/js/all.full.js',
