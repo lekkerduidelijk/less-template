@@ -123,13 +123,6 @@ module.exports = function(grunt) {
           'source/assets/js/main.js',
         ],
         dest: 'build/assets/js/all.full.js',
-      },
-      oldbrowsers: {
-        src: [
-          'bower_components/html5shiv/dist/html5shiv.js',
-          'bower_components/respond/dest/respond.min.js'
-        ],
-        dest: 'build/assets/js/oldbrowsers.js'
       }
     },
 
@@ -139,8 +132,7 @@ module.exports = function(grunt) {
           report: 'min'
         },
         files: {
-          'build/assets/js/all.js': [ 'build/assets/js/all.full.js' ],
-          'build/assets/js/oldbrowsers.js': [ 'build/assets/js/oldbrowsers.js' ]
+          'build/assets/js/all.js': [ 'build/assets/js/all.full.js' ]
         }
       }
     },
