@@ -23,19 +23,19 @@ Project kickstarter.
 * Run <code>grunt build</code> to build production code
 * Run <code>grunt watch</code> to watch files
 
+## Troubleshooting
+
+Stuck? Make sure to update to the latest <code>node</code> and <code>npm</code> versions.
+
 ## Contains
 
 * Bower
   * Bootstrap
-  * RespondJS
-  * jQuery Backstretch
-  * HTML5shiv
   * Modernizr
   * Normalize CSS
 * Grunt
   * Autoprefixer
   * Banner
-  * Coffee script
   * Connect
   * CSS Min
   * Image Min
