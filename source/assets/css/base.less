@@ -1,34 +1,62 @@
-// base.less
+/**
+ * Base
+ *
+ * @author: Rutger Laurman - lekkerduidelijk.nl
+ */
 
-// Set the base stuff here, or let bootstrap/scaffolding take control
+* {
+  .box-sizing(border-box);
+}
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  position: relative;
+}
 
 // Base text color
 html, button, input, select, textarea {
-  color: #222;
+  color: @text-color;
 }
 
 // Base font size
 body {
-  font-size: 1em;
+  .font-family-base;
+  .font-size-normal;
+  background-color: @body-bg;
+  color: @text-color;
   line-height: 1.4;
 }
 
-// Default link style
+// Links
 a {
-  color: #00e;
-}
-a:visited {
-  color: #551a8b;
-}
-a:hover {
-  color: #06e;
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
 }
 
-// H5BP additions
+h1,h2,h3,h4,h5,h6 {
+  .font-family-heading;
+}
+
+figure {
+  margin: 0;
+}
 img {
   vertical-align: middle;
 }
-
 fieldset {
   border: 0;
   margin: 0;
@@ -39,13 +67,7 @@ textarea {
   resize: vertical;
 }
 
-// Helpers
-// Image alignment
-.alignright {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-.alignleft {
-  float: left;
-  margin: 0 1em 1em 0;
+// Text selection color
+::selection {
+  background-color: #cec8b9;
 }

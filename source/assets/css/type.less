@@ -1,0 +1,28 @@
+/**
+ * Type
+ *
+ * @author: Rutger Laurman - lekkerduidelijk.nl
+ */
+
+// Font weights
+.font-weight-light()   { font-weight: 300; }
+.font-weight-regular() { font-weight: 400; }
+.font-weight-bold()    { font-weight: 700; }
+
+// Font sizes
+.font-size-huge()    { font-size: 34px; }
+.font-size-large()   { font-size: 28px; }
+.font-size-normal()  { font-size: @font-size-base; } // default copy
+.font-size-small()   { font-size: 12px; }
+.font-size-tiny()    { font-size: 11px; }
+
+// Base and heading font
+.font-family-base() {
+  .font-weight-regular;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.font-family-heading() {
+  .font-weight-bold;
+  font-family: Helvetica, Arial, sans-serif;
+}
