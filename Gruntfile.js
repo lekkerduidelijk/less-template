@@ -280,7 +280,7 @@ module.exports = function(grunt) {
       'imagemin',
       'svgmin',
       // 'grunticon',
-      'clean:media',
+      // 'clean:media',
       'notify:media'
     ]
   );
@@ -293,7 +293,7 @@ module.exports = function(grunt) {
       'copy',
       'stylesheets',
       'scripts',
-      // 'media',
+      'media',
       'usebanner',
       'notify:build'
     ]
